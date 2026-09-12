@@ -1,17 +1,33 @@
 aid: aerwave
 name: Aerwave
-description: 'Aerwave is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Aerwave is a Dallas, Texas managed Wi-Fi provider founded in 2019 that
+  builds and operates fiber-backed, property-wide wireless networks for multifamily
+  apartment communities and student housing. Its HomeWiFi platform gives each resident
+  a private, VLAN-isolated network with individual encryption and instant-on gigabit
+  service without a rented router, while property owners and managers get a SaaS
+  portal for network management, resident onboarding and support. Aerwave publishes
+  no public developer program or API documentation; the machine-readable surface it
+  does serve is an llms.txt and a live, anonymous Model Context Protocol endpoint on
+  its marketing site, both provided by its Wix hosting platform.'
 url: https://raw.githubusercontent.com/api-evangelist/aerwave/refs/heads/main/apis.yml
+image: https://register.getaerwave.com/images/aerwave_website_logo.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-09-12'
 modified: '2026-09-12'
 tags:
 - Company
+- Managed WiFi
+- Multifamily
+- Real Estate
+- Telecommunications
+- Internet Service Provider
+- Connectivity
+- Smart Buildings
+- PropTech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +35,76 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aerwave-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aerwave
+  url: https://www.aerwave.com/
+- type: Blog
+  url: https://www.aerwave.com/blog
+- type: BlogRSS
+  url: https://www.aerwave.com/blog-feed.xml
+- type: Support
+  url: https://www.aerwave.com/support
+- type: HelpCenter
+  url: https://aerwave.zendesk.com/hc/en-us
+- type: SignUp
+  url: https://register.getaerwave.com
+- type: Login
+  url: https://portal.getaerwave.com/login
+- type: TermsOfService
+  url: https://www.aerwave.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.aerwave.com/privacy-policy
+- type: AcceptableUsePolicy
+  url: https://www.aerwave.com/acceptable-use-policy
+- type: Press
+  url: https://www.aerwave.com/press
+- type: Contact
+  url: https://www.aerwave.com/contact-us
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aerwave
+- type: Careers
+  url: https://www.aerwave.com/careers
+- type: LLMsTxt
+  url: llms/aerwave-llms.txt
+- type: MCPServer
+  url: mcp/aerwave-mcp.yml
+- type: Conformance
+  url: conformance/aerwave-conformance.yml
+- type: Plans
+  url: plans/aerwave-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aerwave-rate-limits.yml
+- type: NetworkManagementPolicy
+  url: https://www.aerwave.com/accessibility-statement-1
+- type: Accessibility
+  url: https://www.aerwave.com/accessibility-statement
+x-enrichment:
+  date: '2026-09-12'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Aerwave sells managed Wi-Fi as an operated service, not as a developer
+    product: aerwave.com is a Wix marketing site with no developer, API or
+    documentation link anywhere in its navigation or sitemap, the only two
+    application hosts are Blazor WebAssembly apps for resident registration and
+    the resident portal, and api/docs/developer/portal subdomains on aerwave.com
+    all return NXDOMAIN.
+  evidence:
+  - url: https://www.aerwave.com/openapi.json
+    status: 400
+  - url: https://portal.getaerwave.com/openapi.json
+    status: 404
+  - url: https://www.aerwave.com/.well-known/api-catalog
+    status: 400
+  - url: https://www.aerwave.com/pages-sitemap.xml
+    status: 200
+  - url: https://www.aerwave.com/llms.txt
+    status: 200
+  - url: https://www.aerwave.com/_api/mcp
+    status: 200
+  checked: '2026-09-12'

@@ -1,0 +1,65 @@
+generated: '2026-09-12'
+method: searched
+source: https://www.aerwave.com/accessibility-statement-1
+summary: >-
+  Aerwave publishes no API contract, so there is no spec to derive API-standard
+  conformance from. Two conformance signals are real and evidenced: a live
+  Model Context Protocol endpoint that answered a JSON-RPC 2.0 tools/list, and a
+  Network Management Policy carrying the no-blocking / no-throttling /
+  no-paid-prioritization commitments that the FCC Open Internet transparency rule
+  asks a broadband provider to disclose. No security or privacy certification
+  (SOC 2, ISO 27001, PCI DSS, HIPAA, FedRAMP) is named anywhere on the site.
+conformance:
+- id: mcp
+  name: Model Context Protocol
+  conforms: true
+  evidence: https://www.aerwave.com/_api/mcp
+  note: >-
+    POST tools/list returned HTTP 200 with a JSON-RPC 2.0 envelope and nine tools
+    carrying draft-07 JSON Schema inputSchema blocks, probed 2026-09-12. The
+    endpoint is provided by Wix, Aerwave's site host, not authored by Aerwave.
+- id: jsonrpc-2.0
+  name: JSON-RPC 2.0
+  conforms: true
+  evidence: https://www.aerwave.com/_api/mcp
+  note: Transport envelope of the MCP endpoint; jsonrpc "2.0" present in the response.
+- id: llms-txt
+  name: llms.txt
+  conforms: true
+  evidence: https://www.aerwave.com/llms.txt
+  note: HTTP 200, text/plain, llms.txt shape (H1 + blockquote summary + link sections).
+- id: open-internet-transparency
+  name: Open Internet / network management transparency (FCC-style disclosure)
+  conforms: true
+  evidence: https://www.aerwave.com/accessibility-statement-1
+  note: >-
+    The published Network Management Policy states "Aerwave will not block any
+    lawful content, applications, or services", "Aerwave will not throttle or
+    intentionally reduce the speed of any traffic" and "Aerwave will not
+    prioritize any specific types of traffic over others". The document makes the
+    disclosure but never cites the FCC or an Open Internet rule by name, so this
+    is recorded as a substantive match, not a claimed certification.
+- id: oauth2
+  conforms: false
+  evidence: https://www.aerwave.com/.well-known/oauth-authorization-server
+  note: HTTP 400 (Wix HTML shell). No authorization-server metadata is published.
+- id: oidc
+  conforms: false
+  evidence: https://portal.getaerwave.com/.well-known/openid-configuration
+  note: HTTP 200 but the body is the Blazor SPA shell, not an OIDC discovery document.
+- id: rfc9457
+  conforms: false
+  evidence: 'no OpenAPI or error reference published'
+- id: rfc9116
+  name: security.txt
+  conforms: false
+  evidence: https://www.aerwave.com/.well-known/security.txt
+  note: HTTP 400. Not served on any Aerwave host.
+certifications: []
+domain_standard:
+  applicable: false
+  note: >-
+    Residential broadband / managed Wi-Fi has no published API interchange
+    standard that Aerwave's market expects a contract to declare, and Aerwave
+    ships no contract in which to declare one. Recorded as not applicable rather
+    than as a failure.

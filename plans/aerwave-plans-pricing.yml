@@ -1,0 +1,26 @@
+generated: '2026-09-12'
+method: searched
+source: https://www.aerwave.com/sales
+summary: >-
+  Aerwave publishes no public price list. It sells property-wide managed Wi-Fi to
+  multifamily owners, operators and developers through a sales conversation, and
+  the only pricing-adjacent call to action on the site is a "Request a Demo"
+  form. /pricing returns HTTP 404 and no pricing page appears in the site's own
+  sitemap. Residents do not buy from a public tier list either; service is
+  provisioned by the property.
+plan_count: 0
+plans: []
+pricing_pages_probed:
+- url: https://www.aerwave.com/pricing
+  status: 404
+- url: https://www.aerwave.com/sales
+  status: 200
+  note: Request-a-demo form; no prices, tiers, quotas or overage stated
+- url: https://www.aerwave.com/solutions
+  status: 200
+  note: Product positioning only; no prices
+model: enterprise-contact-sales
+notes:
+- >-
+  There is no API product to price. Aerwave publishes no developer program, so
+  there are no API plans, quotas or overage terms to record.

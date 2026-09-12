@@ -1,0 +1,27 @@
+generated: '2026-09-12'
+method: searched
+source: https://www.aerwave.com/
+summary: >-
+  Aerwave documents no API rate limits, because it documents no API. No developer
+  portal, API reference or docs host exists on any Aerwave-controlled domain, so
+  there is no published limit, window, burst allowance or 429 behaviour to record.
+limit_count: 0
+rate_limits: []
+response_headers: []
+exhaustion_status: null
+surfaces_checked:
+- url: https://www.aerwave.com/llms.txt
+  status: 200
+  note: Served, but describes the Wix site MCP endpoint only - no rate limits stated
+- url: https://www.aerwave.com/_api/mcp
+  status: 200
+  note: Live MCP endpoint; tools/list returned 200 with no RateLimit-* or X-RateLimit-* headers
+- url: https://www.aerwave.com/openapi.json
+  status: 400
+- url: https://portal.getaerwave.com/openapi.json
+  status: 404
+notes:
+- >-
+  The one reachable machine surface is the Wix-provided site MCP endpoint. Its
+  200 response carried no RateLimit-*, X-RateLimit-* or Retry-After header, and
+  Aerwave publishes no policy document for it.

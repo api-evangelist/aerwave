@@ -1,0 +1,100 @@
+generated: '2026-09-12'
+method: probed
+source: https://www.aerwave.com/_api/mcp
+name: Aerwave Site MCP
+slug: aerwave
+summary: >-
+  Aerwave serves a live, anonymous Model Context Protocol endpoint at
+  https://www.aerwave.com/_api/mcp. It is advertised in the company's own
+  llms.txt at https://www.aerwave.com/llms.txt and answered a tools/list
+  request with HTTP 200 and nine tools carrying full JSON Schema inputSchema
+  blocks on 2026-09-12.
+authorship: platform
+authorship_note: >-
+  This endpoint is provided by Wix, Aerwave's website hosting platform, not
+  authored by Aerwave engineering. The tool set is the generic Wix Site MCP
+  surface (site search, business details, Wix REST API passthrough) and is
+  identical in shape across every Wix-hosted site. It is recorded because it
+  is genuinely served from a host Aerwave controls and is genuinely reachable
+  by an agent with no credentials - but it exposes the public marketing site,
+  not the Aerwave managed-WiFi product. Aerwave publishes no first-party API.
+deployment:
+  mode: remote
+  endpoint: https://www.aerwave.com/_api/mcp
+  auth: none
+  verified: probed
+protocol:
+  transport: streamable-http
+  jsonrpc: '2.0'
+  method_probed: tools/list
+  http_status: 200
+  content_type: application/json; charset=utf-8
+  probed: '2026-09-12'
+status: live
+tools_file: mcp/aerwave-mcp-tools.json
+tool_count: 9
+tools:
+- name: GetBusinessDetails
+  description: Get business and site details for the Aerwave site (timezone, email, phone, address).
+  parameters: []
+  read_only: true
+- name: SearchInSite
+  description: Searches the Aerwave site for information.
+  parameters:
+  - searchTerm
+  read_only: true
+- name: SearchSiteApiDocs
+  description: Searches the site API documentation and returns how to use the site APIs.
+  parameters:
+  - searchTerm
+  read_only: unstated
+- name: GenerateVisitorToken
+  description: Creates a visitor session and returns a visitor access token for the site.
+  parameters: []
+  read_only: unstated
+- name: CallWixSiteAPI
+  description: Calls Wix API methods on the site to act on a visitor's behalf.
+  parameters:
+  - visitorToken
+  - url
+  - method
+  - body
+  read_only: unstated
+- name: BrowseWixRESTDocsMenu
+  description: Browse the Wix REST API documentation menu hierarchy.
+  parameters:
+  - menuUrl
+  - reason
+  read_only: true
+- name: ReadFullDocsArticle
+  description: Fetches a full Wix docs article or method article with code examples.
+  parameters:
+  - articleUrl
+  read_only: true
+- name: ReadFullDocsMethodSchema
+  description: Fetches the full method schema for a given Wix API method.
+  parameters:
+  - articleUrl
+  - reason
+  read_only: true
+- name: ExecuteWixAPI
+  description: Runs JavaScript against the Wix REST API on the site, on the visitor's behalf.
+  parameters:
+  - code
+  - reason
+  - hasMutations
+  - sourceDocUrls
+  - visitorToken
+  read_only: false
+  destructive: true
+notes:
+- >-
+  The tools/list response is saved verbatim to mcp/aerwave-mcp-tools.json; every
+  inputSchema in this manifest is copied from that response, not authored here.
+- >-
+  No OAuth challenge was returned. Both /.well-known/oauth-protected-resource and
+  /.well-known/oauth-authorization-server return HTTP 400 with the Wix HTML shell
+  on this host, so there is no published authorization-server metadata.
+- >-
+  No tool crosswalk is emitted, because Aerwave publishes no OpenAPI or GraphQL
+  surface for these tools to bind to.

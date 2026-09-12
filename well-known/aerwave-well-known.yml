@@ -1,0 +1,126 @@
+generated: '2026-09-12'
+method: probed
+source: live probe of every host in apis.yml on 2026-09-12
+summary: >-
+  No /.well-known/ document is served on any Aerwave host. The marketing site
+  (Wix) answers HTTP 400 with an HTML error shell for every /.well-known/ path;
+  the resident portal and registration app (Blazor, Azure) answer 200 with the
+  same SPA shell for /.well-known/openid-configuration, /oauth-authorization-server
+  and /api-catalog, which is a single-page-app catch-all and not a document.
+  No WellKnown or SecurityTxt pointer is emitted, because nothing was served.
+hosts:
+- host: www.aerwave.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 400
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 400
+    file: null
+  - path: /.well-known/api-catalog
+    status: 400
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 400
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 400
+    file: null
+  - path: /.well-known/agent.json
+    status: 400
+    file: null
+- host: getaerwave.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 400
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+    file: null
+  - path: /.well-known/api-catalog
+    status: 400
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 400
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 400
+    file: null
+  - path: /.well-known/agent.json
+    status: 400
+    file: null
+- host: portal.getaerwave.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: HTML SPA shell (Blazor ResidentPortal.Client), not a document - treated as a miss
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: register.getaerwave.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: aerwave.zendesk.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

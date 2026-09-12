@@ -1,0 +1,49 @@
+generated: '2026-09-12'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.aerwave.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  7 20:01:08 2026 GMT
+  hsts: true
+  hsts_max_age: 31556952
+- host: getaerwave.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 16 13:52:13 2026 GMT
+  hsts: false
+  hsts_max_age: null
+  note: redirects (HTTP 301) to www.aerwave.com
+- host: portal.getaerwave.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 26 18:12:48 2026 GMT
+  hsts: true
+  hsts_max_age: 2592000
+  note: Blazor WebAssembly resident portal (ResidentPortal.Client), Azure-hosted
+- host: register.getaerwave.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 26 16:09:56 2026 GMT
+  hsts: true
+  hsts_max_age: 2592000
+  note: Blazor resident registration app, Azure-hosted
+domains:
+- domain: aerwave.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
+- domain: getaerwave.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: v=spf1 include:spf.protection.outlook.com include:mailgun.org -all
+  dmarc: false
+  dmarc_policy: null
+notes:
+- >-
+  getaerwave.com carries no DMARC record and no CAA record, while aerwave.com
+  publishes DMARC at p=none (monitor only) and also no CAA. Probed 2026-09-12.
