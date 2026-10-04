@@ -22,7 +22,7 @@ tags:
 - Company
 - Managed WiFi
 - Multifamily
-- Real-Estate
+- Real Estate
 - Telecommunications
 - Internet Service Provider
 - Connectivity
@@ -38,6 +38,7 @@ tags_raw:
 - Connectivity
 - Smart Buildings
 - PropTech
+- Real-Estate
 apis: []
 maintainers:
 - FN: Kin Lane
