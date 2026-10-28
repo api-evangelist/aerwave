@@ -64,5 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aerwave is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/aerwave
+Aerwave is a Dallas, Texas managed Wi-Fi provider founded in 2019 that builds and operates fiber-backed, property-wide wireless networks for multifamily apartment communities and student housing. Its HomeWiFi platform gives each resident a private, VLAN-isolated network with individual encryption and instant-on gigabit service without a rented router, while property owners and managers get a SaaS portal for network management, resident onboarding and support. Aerwave publishes no public developer program or API documentation; the machine-readable surface it does serve is an llms.txt and a live, anonymous Model Context Protocol endpoint on its marketing site, both provided by its Wix hosting platform.
+
+**Areas:** Company · Managed WiFi · Multifamily · Real Estate · Telecommunications · Internet Service Provider · Connectivity · Smart Buildings · PropTech
+
+## Aerwave on APIs.io
+
+Everything profiled for Aerwave is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aerwave/](https://apis.io/providers/aerwave/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Aerwave Site MCP](https://apis.io/servers/aerwave/aerwave-site-mcp/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aerwave Domain Security](https://apis.io/security/aerwave/aerwave-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aerwave Plans Pricing](https://apis.io/plans/aerwave/aerwave-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aerwave Rate Limits](https://apis.io/rate-limits/aerwave/aerwave-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.aerwave.com/)
+- [Sign up](https://register.getaerwave.com)
+- [Support](https://www.aerwave.com/support)
+- [Blog](https://www.aerwave.com/blog)
+- [Terms of service](https://www.aerwave.com/terms-of-service)
+- [Privacy policy](https://www.aerwave.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 15.7** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 59.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 34.2 |
+
+**Agent readiness 4.7** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 15.8** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aerwave/](https://apis.io/providers/aerwave/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Aerwave: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aerwave/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
